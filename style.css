@@ -1,0 +1,37 @@
+.accordion {
+    max-width: 600px;
+    margin:0 auto;
+    text-align: center;
+}
+.accordion__item {
+    margin: 10px 20px;
+}
+.accordion__item.active > .accordion__body {
+    height: 70px;
+    padding: 10px;
+}
+.accordion__item.active > .accordion__head::before {
+    content: '-';
+}
+.accordion__head {
+    position: relative;
+    padding: 10px;
+    background-color: rgb(220, 176, 117);
+    color: #fff;
+    cursor: pointer;
+}
+.accordion__head::before {
+    position: absolute;
+    content: '+';
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 22xp;
+    transition: 0.5s;
+}
+.accordion__body {
+    background-color: blanchedalmond;
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in .3s;
+}
